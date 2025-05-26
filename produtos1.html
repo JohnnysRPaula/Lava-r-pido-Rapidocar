@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo - RápidoCar Auto Peças</title>
+  <style>
+    body {
+      background-image: url('fundo.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: black;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      font-size: 18px;
+    }
+    h1, h2, p, ul, li, a {
+      color: black;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
+    }
+    a {
+      color: #0645AD;
+      text-decoration: underline;
+      text-shadow: none;
+    }
+    main {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 1100px;
+      margin: 40px auto;
+    }
+    .catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .produto {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      padding: 10px;
+      text-align: center;
+    }
+    .produto img {
+      width: 100%;
+      height: 140px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    .produto h2 {
+      font-size: 1.1em;
+      margin: 0 0 10px;
+    }
+    .produto p {
+      margin: 5px 0;
+    }
+    .preco {
+      color: green;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .back-link {
+      display: block;
+      margin-top: 30px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Catálogo de Produtos</h1>
+    <div class="catalogo">
+      <div class="produto">
+        <img src="filtro de oleo.avif" alt="Filtro de óleo">
+        <h2>Filtro de Óleo</h2>
+        <p>Compatível com diversos modelos.</p>
+        <p class="preco">R$ 29,90</p>
+        <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="pastilhas de freio.jpg" alt="Pastilhas de freio">
+        <h2>Pastilhas de Freio</h2>
+        <p>Alta performance e durabilidade.</p>
+        <p class="preco">R$ 79,90</p>
+        <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="bateria 60a.webp" alt="Bateria automotiva">
+        <h2>Bateria 60Ah</h2>
+        <p>Garantia de 18 meses.</p>
+        <p class="preco">R$ 529,90</p>
+        <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="amortecedor.avif" alt="Amortecedor">
+        <h2>Amortecedor Dianteiro</h2>
+        <p>Conforto e segurança.</p>
+        <p class="preco">R$ 600,00</p>
+        <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="velas ignição.avif" alt="Velas de ignição">
+        <h2>Vela de Ignição</h2>
+        <p>Para motores 1.0 a 2.0.</p>
+        <p class="preco">R$ 79,90</p>
+        <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="correia dentada.avif" alt="Correia dentada">
+        <h2>Correia Dentada</h2>
+        <p>Material de alta resistência.</p>
+        <p class="preco">R$ 59,90</p>
+        <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="radiador.avif" alt="Radiador automotivo">
+        <h2>Radiador</h2>
+        <p>Com garantia de 1 ano.</p>
+        <p class="preco">R$ 349,90</p>
+        <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="oleo lubrificante.webp" alt="Óleo lubrificante">
+        <h2>Óleo 5W30 Sintético</h2>
+        <p>Embalagem com 1 litro.</p>
+        <p class="preco">R$ 49,90</p>
+        <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="sensor lambda.webp" alt="Sensor lambda">
+        <h2>Sensor Lambda</h2>
+        <p>Compatível com veículos flex.</p>
+        <p class="preco">R$ 210,00</p>
+        <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="farol automotivo.avif" alt="Farol automotivo">
+        <h2>Farol Dianteiro</h2>
+        <p>Luz branca de alta intensidade.</p>
+        <p class="preco">R$ 499,90</p>
+        <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+      </div>
+        <div class="produto">
+        <img src="cabos de vela.webp" alt="Cabos de vela">
+        <h2>Cabos de Vela</h2>
+        <p>Compatível com veículos flex.</p>
+        <p class="preco">R$ 120,00</p>
+        <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="sensor de temperatura.webp" alt="Sensor de temperatura">
+        <h2>Sensor de Temperatura</h2>
+        <p>Compatível com veículos da marca GM.</p>
+        <p class="preco">R$ 200,00</p>
+        <button onclick="adicionarAoCarrinho(this)">Comprar</button>
+      </div>
+      
+    </div>
+    <a href="frontal.html" class="back-link">← Voltar para a página inicial</a>
+  </main>
+  <script>
+  function adicionarAoCarrinho(botao) {
+    const produto = botao.parentElement.querySelector("h2").innerText;
+    alert(`"${produto}" foi adicionado ao carrinho!`);
+  }
+</script>
+</body>
+</html>
